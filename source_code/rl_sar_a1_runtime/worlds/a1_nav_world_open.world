@@ -1,0 +1,140 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <world name="default">
+    <physics type="ode">
+      <max_step_size>0.0005</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>2000</real_time_update_rate>
+      <gravity>0 0 -9.81</gravity>
+      <ode>
+        <solver>
+          <type>quick</type>
+          <iters>50</iters>
+          <sor>1.3</sor>
+        </solver>
+        <constraints>
+          <cfm>0.0</cfm>
+          <erp>0.2</erp>
+          <contact_max_correcting_vel>10.0</contact_max_correcting_vel>
+          <contact_surface_layer>0.001</contact_surface_layer>
+        </constraints>
+      </ode>
+    </physics>
+
+    <scene>
+      <sky>
+        <clouds>
+          <speed>8</speed>
+        </clouds>
+      </sky>
+    </scene>
+
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <model name="feature_north">
+      <static>true</static>
+      <pose>0.0 4.5 0.5 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>4.0 0.25 1.0</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>4.0 0.25 1.0</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.25 0.25 0.25 1.0</ambient>
+            <diffuse>0.35 0.35 0.35 1.0</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="feature_south">
+      <static>true</static>
+      <pose>0.0 -4.5 0.5 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>4.0 0.25 1.0</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>4.0 0.25 1.0</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.25 0.25 0.25 1.0</ambient>
+            <diffuse>0.35 0.35 0.35 1.0</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="feature_east">
+      <static>true</static>
+      <pose>4.5 0.0 0.5 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.25 4.0 1.0</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.25 4.0 1.0</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.25 0.25 0.25 1.0</ambient>
+            <diffuse>0.35 0.35 0.35 1.0</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="feature_west">
+      <static>true</static>
+      <pose>-4.5 0.0 0.5 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.25 4.0 1.0</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.25 4.0 1.0</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.25 0.25 0.25 1.0</ambient>
+            <diffuse>0.35 0.35 0.35 1.0</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+  </world>
+</sdf>

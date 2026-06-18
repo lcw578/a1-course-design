@@ -2,6 +2,8 @@
 
 本目录补齐《机器人驱动与控制》课程设计中当前仓库缺少的理论建模、控制和评估脚本。现有 `rl_sar` 中已经完成的 A1 URDF、Gazebo、ROS2 control、RL policy、Nav2 和状态估计文件不重复实现，只在这里新增课程作业专用实验。
 
+为满足课程提交中“源代码（含 URDF 文件及控制程序）”的要求，`source_code/` 额外保留了本项目直接使用的 A1 最小源码子集，包括 A1 URDF/mesh、ROS 2 joint controller、消息定义、A1 policy、Gazebo/Nav2 launch、ground-truth odom 和目标点评估脚本。该目录不是完整上游 `rl_sar` 仓库，只包含本课程设计相关内容。
+
 ## 任务映射
 
 | 作业任务 | 本目录实现 | 说明 |

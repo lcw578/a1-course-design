@@ -1,0 +1,6 @@
+std_msgs/Header header
+int32 active_contact_legs
+int32 attempted_contact_measurements
+int32 accepted_contact_measurements
+int32 position_updates
+int32 velocity_updates
