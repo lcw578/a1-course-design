@@ -9,8 +9,8 @@
 1. **训练过程证据**  
    按用户要求，采用 `UniLab` 中的四足机器人 PPO 训练记录作为任务 7 的训练过程证明材料。
 2. **A1 仿真评估**  
-   使用当前仓库已有的 A1 policy：
-   [model.pt](/home/lcw/rl_sar_ws/src/rl_sar/policy/a1/legged_gym/model.pt)
+   使用课程仓库中保留的 A1 policy：
+   `source_code/a1_policy/legged_gym/model.pt`
    在 Gazebo + ROS2 仿真中评估 `/cmd_vel -> /odom` 的速度跟踪 RMSE。
 
 这意味着：
@@ -62,7 +62,7 @@ course_design/task7_rl_velocity_eval/ros2_velocity_rmse_eval.py
 本次评估使用的策略文件为：
 
 ```text
-/home/lcw/rl_sar_ws/src/rl_sar/policy/a1/legged_gym/model.pt
+source_code/a1_policy/legged_gym/model.pt
 ```
 
 本次采用仓库现有 launch：

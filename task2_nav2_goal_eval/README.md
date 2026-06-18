@@ -6,6 +6,16 @@
 
 当前推荐直接复用现有 `a1_nav2_sim.launch.py`，保留 Nav2，但不使用 AMCL，也不引入状态估计误差：
 
+课程提交仓库中保留了对应源码子集：
+
+```text
+source_code/rl_sar_a1_runtime/launch/a1_nav2_sim.launch.py
+source_code/rl_sar_a1_runtime/scripts/gazebo_ground_truth_odom.py
+source_code/rl_sar_a1_runtime/scripts/evaluate_nav2_goal_sequence.py
+source_code/rl_sar_a1_runtime/config/a1_nav2_ground_truth_refined.yaml
+source_code/rl_sar_a1_runtime/maps/a1_nav_world_empty.yaml
+```
+
 ```bash
 source /opt/ros/humble/setup.bash
 source /home/lcw/rl_sar_ws/install/setup.bash
