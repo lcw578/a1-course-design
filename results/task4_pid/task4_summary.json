@@ -1,0 +1,272 @@
+{
+  "q0_rad": [
+    0.0,
+    0.8,
+    -1.5
+  ],
+  "qf_rad": [
+    0.18,
+    1.05,
+    -1.25
+  ],
+  "duration_sec": 4.0,
+  "dt_sec": 0.002,
+  "trajectory": {
+    "type": "joint-space quintic polynomial",
+    "boundary_conditions": "zero initial/final joint velocity and acceleration",
+    "coefficients": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.028124999999999997,
+        -0.010546874999999999,
+        0.0010546875
+      ],
+      [
+        0.8,
+        0.0,
+        0.0,
+        0.0390625,
+        -0.0146484375,
+        0.00146484375
+      ],
+      [
+        -1.5,
+        0.0,
+        0.0,
+        0.0390625,
+        -0.0146484375,
+        0.00146484375
+      ]
+    ]
+  },
+  "controller": {
+    "selected_profile": "final_pid",
+    "selection_reason": "conservative gains selected for the report; the higher-gain profile has lower nominal-model RMSE but less margin for unmodeled delay, noise, and torque limits on a real quadruped",
+    "kp": [
+      9.0,
+      10.0,
+      8.0
+    ],
+    "ki": [
+      0.6,
+      0.6,
+      0.5
+    ],
+    "kd": [
+      0.25,
+      0.28,
+      0.22
+    ],
+    "integral_limit": 0.35,
+    "actuator_tau_sec": [
+      0.045,
+      0.055,
+      0.055
+    ],
+    "max_speed_rad_s": [
+      4.0,
+      5.0,
+      5.0
+    ]
+  },
+  "selected_metrics": {
+    "profile": "final_pid",
+    "description": "selected balanced PID gains",
+    "kp": [
+      9.0,
+      10.0,
+      8.0
+    ],
+    "ki": [
+      0.6,
+      0.6,
+      0.5
+    ],
+    "kd": [
+      0.25,
+      0.28,
+      0.22
+    ],
+    "integral_limit": 0.35,
+    "position_error_rmse_rad": 0.01214167129500368,
+    "velocity_error_rmse_rad_s": 0.011457435051901759,
+    "foot_error_rmse_m": 0.003975667495442237,
+    "max_position_error_rad": 0.019393499948342274,
+    "max_velocity_error_rad_s": 0.016495466961201265,
+    "max_foot_error_m": 0.006358285455265444,
+    "final_position_error_rad": 0.0022605744787945596,
+    "final_velocity_error_rad_s": 0.0032626324129866506,
+    "final_foot_error_m": 0.0007459231276270462,
+    "max_abs_command_rad_s": 0.11773527282548163,
+    "saturation_ratio": 0.0
+  },
+  "tuning_metrics": [
+    {
+      "profile": "low_pd",
+      "description": "low proportional/derivative gains, no integral term",
+      "kp": [
+        3.0,
+        3.5,
+        3.0
+      ],
+      "ki": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "kd": [
+        0.08,
+        0.09,
+        0.08
+      ],
+      "integral_limit": 0.35,
+      "position_error_rmse_rad": 0.03610485175353494,
+      "velocity_error_rmse_rad_s": 0.02955912055614037,
+      "foot_error_rmse_m": 0.011910401865946699,
+      "max_position_error_rad": 0.0560492727521386,
+      "max_velocity_error_rad_s": 0.04152744012203056,
+      "max_foot_error_m": 0.0185322489171273,
+      "final_position_error_rad": 0.0062491577111312485,
+      "final_velocity_error_rad_s": 0.021499136591242272,
+      "final_foot_error_m": 0.0019851563950485443,
+      "max_abs_command_rad_s": 0.11377765452223107,
+      "saturation_ratio": 0.0
+    },
+    {
+      "profile": "medium_pd",
+      "description": "medium proportional/derivative gains, no integral term",
+      "kp": [
+        6.0,
+        7.0,
+        6.0
+      ],
+      "ki": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "kd": [
+        0.16,
+        0.18,
+        0.16
+      ],
+      "integral_limit": 0.35,
+      "position_error_rmse_rad": 0.0183435128106305,
+      "velocity_error_rmse_rad_s": 0.01577774571784901,
+      "foot_error_rmse_m": 0.006046399079805469,
+      "max_position_error_rad": 0.028724028700181908,
+      "max_velocity_error_rad_s": 0.022059296266051142,
+      "max_foot_error_m": 0.009485275193384816,
+      "final_position_error_rad": 0.0008166533442673727,
+      "final_velocity_error_rad_s": 0.0064298978540377584,
+      "final_foot_error_m": 0.0002541258371227299,
+      "max_abs_command_rad_s": 0.11663685793982237,
+      "saturation_ratio": 0.0
+    },
+    {
+      "profile": "medium_pid",
+      "description": "medium PID gains with integral compensation",
+      "kp": [
+        8.0,
+        9.0,
+        7.5
+      ],
+      "ki": [
+        0.35,
+        0.35,
+        0.3
+      ],
+      "kd": [
+        0.22,
+        0.25,
+        0.2
+      ],
+      "integral_limit": 0.35,
+      "position_error_rmse_rad": 0.013628538885475414,
+      "velocity_error_rmse_rad_s": 0.012483988222827069,
+      "foot_error_rmse_m": 0.004481937491069569,
+      "max_position_error_rad": 0.021635756241726953,
+      "max_velocity_error_rad_s": 0.01780861451209926,
+      "max_foot_error_m": 0.007125423102435472,
+      "final_position_error_rad": 0.0014962551256686868,
+      "final_velocity_error_rad_s": 0.003960219818381833,
+      "final_foot_error_m": 0.0004981038448771455,
+      "max_abs_command_rad_s": 0.11745724979141466,
+      "saturation_ratio": 0.0
+    },
+    {
+      "profile": "final_pid",
+      "description": "selected balanced PID gains",
+      "kp": [
+        9.0,
+        10.0,
+        8.0
+      ],
+      "ki": [
+        0.6,
+        0.6,
+        0.5
+      ],
+      "kd": [
+        0.25,
+        0.28,
+        0.22
+      ],
+      "integral_limit": 0.35,
+      "position_error_rmse_rad": 0.01214167129500368,
+      "velocity_error_rmse_rad_s": 0.011457435051901759,
+      "foot_error_rmse_m": 0.003975667495442237,
+      "max_position_error_rad": 0.019393499948342274,
+      "max_velocity_error_rad_s": 0.016495466961201265,
+      "max_foot_error_m": 0.006358285455265444,
+      "final_position_error_rad": 0.0022605744787945596,
+      "final_velocity_error_rad_s": 0.0032626324129866506,
+      "final_foot_error_m": 0.0007459231276270462,
+      "max_abs_command_rad_s": 0.11773527282548163,
+      "saturation_ratio": 0.0
+    },
+    {
+      "profile": "high_pid",
+      "description": "higher gains to evaluate overshoot and command effort",
+      "kp": [
+        13.0,
+        15.0,
+        12.0
+      ],
+      "ki": [
+        0.8,
+        0.8,
+        0.65
+      ],
+      "kd": [
+        0.34,
+        0.38,
+        0.32
+      ],
+      "integral_limit": 0.35,
+      "position_error_rmse_rad": 0.00815159777729501,
+      "velocity_error_rmse_rad_s": 0.007699347636948634,
+      "foot_error_rmse_m": 0.0026664229827660373,
+      "max_position_error_rad": 0.013004225278460584,
+      "max_velocity_error_rad_s": 0.01103961451387451,
+      "max_foot_error_m": 0.004259293782916632,
+      "final_position_error_rad": 0.0014749706200049536,
+      "final_velocity_error_rad_s": 0.0013150117170068825,
+      "final_foot_error_m": 0.00048443383828935545,
+      "max_abs_command_rad_s": 0.11771597644116856,
+      "saturation_ratio": 0.0
+    }
+  ],
+  "outputs": {
+    "tracking_csv": "/home/lcw/rl_sar_ws/course_design/results/task4_pid/velocity_pid_tracking.csv",
+    "tuning_csv": "/home/lcw/rl_sar_ws/course_design/results/task4_pid/pid_tuning_sweep.csv",
+    "tuning_plot": "/home/lcw/rl_sar_ws/course_design/results/task4_pid/pid_tuning_comparison.png",
+    "error_plot": "/home/lcw/rl_sar_ws/course_design/results/task4_pid/velocity_pid_error.png",
+    "joint_position_plot": "/home/lcw/rl_sar_ws/course_design/results/task4_pid/joint_position_tracking.png",
+    "joint_velocity_plot": "/home/lcw/rl_sar_ws/course_design/results/task4_pid/joint_velocity_tracking.png",
+    "command_plot": "/home/lcw/rl_sar_ws/course_design/results/task4_pid/velocity_pid_command.png",
+    "foot_path_plot": "/home/lcw/rl_sar_ws/course_design/results/task4_pid/foot_path_tracking_xz.png"
+  }
+}

@@ -1,0 +1,5 @@
+index,joint,axis,theta,translation_after_rotation_m,description
+base,trunk_to_FR_hip,-,-,"[0.1805, -0.047, 0.0]",base/trunk frame to hip joint origin
+1,FR_hip_joint,x,q1,"[0.0, -0.0838, 0.0]",hip abduction/adduction; URDF axis x
+2,FR_thigh_joint,y,q2,"[0.0, 0.0, -0.2]",thigh pitch; URDF axis y
+3,FR_calf_joint,y,q3,"[0.0, 0.0, -0.2]",calf pitch; URDF axis y

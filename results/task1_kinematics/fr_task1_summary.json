@@ -1,0 +1,73 @@
+{
+  "leg": "FR",
+  "workspace_samples": 5000,
+  "joint_limits_rad": {
+    "lower": [
+      -0.802851455917,
+      -1.0471975512,
+      -2.69653369433
+    ],
+    "upper": [
+      0.802851455917,
+      4.18879020479,
+      -0.916297857297
+    ]
+  },
+  "equivalent_transform_rows": [
+    {
+      "index": "base",
+      "joint": "trunk_to_FR_hip",
+      "axis": "-",
+      "theta": "-",
+      "translation_after_rotation_m": [
+        0.1805,
+        -0.047,
+        0.0
+      ],
+      "description": "base/trunk frame to hip joint origin"
+    },
+    {
+      "index": 1,
+      "joint": "FR_hip_joint",
+      "axis": "x",
+      "theta": "q1",
+      "translation_after_rotation_m": [
+        0.0,
+        -0.0838,
+        0.0
+      ],
+      "description": "hip abduction/adduction; URDF axis x"
+    },
+    {
+      "index": 2,
+      "joint": "FR_thigh_joint",
+      "axis": "y",
+      "theta": "q2",
+      "translation_after_rotation_m": [
+        0.0,
+        0.0,
+        -0.2
+      ],
+      "description": "thigh pitch; URDF axis y"
+    },
+    {
+      "index": 3,
+      "joint": "FR_calf_joint",
+      "axis": "y",
+      "theta": "q3",
+      "translation_after_rotation_m": [
+        0.0,
+        0.0,
+        -0.2
+      ],
+      "description": "calf pitch; URDF axis y"
+    }
+  ],
+  "max_ik_position_error_m": 9.896255409983198e-09,
+  "outputs": {
+    "workspace_3d": "/home/lcw/rl_sar_ws/course_design/results/task1_kinematics/fr_workspace_3d.png",
+    "workspace_xz": "/home/lcw/rl_sar_ws/course_design/results/task1_kinematics/fr_workspace_xz.png",
+    "ik_validation_csv": "/home/lcw/rl_sar_ws/course_design/results/task1_kinematics/fr_ik_validation.csv",
+    "urdf_equivalent_mdh_table_csv": "/home/lcw/rl_sar_ws/course_design/results/task1_kinematics/fr_urdf_equivalent_mdh_table.csv"
+  }
+}

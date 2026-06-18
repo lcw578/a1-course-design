@@ -1,0 +1,13 @@
+{
+  "duration_sec": 28.0,
+  "rate_hz": 20.0,
+  "cmd_topic": "/cmd_vel",
+  "odom_topic": "/odom",
+  "policy_path": "/home/lcw/rl_sar_ws/src/rl_sar/policy/a1/legged_gym/model.pt",
+  "vx_rmse_m_s": 0.060204498394438456,
+  "wz_rmse_rad_s": 0.18922823605298986,
+  "outputs": {
+    "csv": "/home/lcw/rl_sar_ws/course_design/results/task7_rl_velocity_eval/rl_velocity_rmse.csv",
+    "plot": "/home/lcw/rl_sar_ws/course_design/results/task7_rl_velocity_eval/rl_velocity_tracking.png"
+  }
+}

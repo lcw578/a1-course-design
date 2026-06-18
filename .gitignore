@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+*.log
+
+# Local ROS/Gazebo build artifacts should stay outside the course-design repo.
+build/
+install/
+log/
+
+# Keep the report-facing A1 training plots, but do not publish the raw
+# intermediate Go2 evidence or temporary proxy plots.
+results/task7_rl_velocity_eval/evidence_go2_unilab/
+results/task7_rl_velocity_eval/*_proxy_*.png

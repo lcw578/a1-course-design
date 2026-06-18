@@ -1,0 +1,46 @@
+{
+  "model": "2R sagittal thigh-calf subsystem",
+  "equation": "M(q)ddq + C(q,dq) + g(q) = tau",
+  "assumptions": [
+    "The A1 hip abduction/adduction joint is excluded from task-5 dynamics.",
+    "The model is restricted to the sagittal thigh-calf plane.",
+    "The base/trunk is treated as fixed during the 2R derivation."
+  ],
+  "parameters": {
+    "l1_m": 0.2,
+    "l2_m": 0.2,
+    "m1_kg": 1.013,
+    "m2_kg": 0.166,
+    "lc1_m": 0.1,
+    "lc2_m": 0.1,
+    "i1_kg_m2": 0.005139339,
+    "i2_kg_m2": 0.003014022,
+    "gravity_m_s2": 9.81
+  },
+  "max_residual_norm": 3.9968028886505635e-15,
+  "forced_response_metrics": {
+    "joint1": {
+      "inertia_rms_Nm": 0.5880458252676724,
+      "coriolis_rms_Nm": 0.5239411064936699,
+      "gravity_rms_Nm": 0.9209387673815648,
+      "applied_tau_rms_Nm": 0.980146132967601
+    },
+    "joint2": {
+      "inertia_rms_Nm": 0.20407297097455349,
+      "coriolis_rms_Nm": 0.10293070401808804,
+      "gravity_rms_Nm": 0.11795231707580867,
+      "applied_tau_rms_Nm": 0.25542856006483866
+    },
+    "max_time_series_residual_norm": 4.793364605007606e-16
+  },
+  "analysis_note": "The gravity term dominates the static load, especially on joint 1. The Coriolis term remains relatively small in this low-speed forced response, while the inertia term varies with commanded acceleration.",
+  "duration_sec": 3.0,
+  "dt_sec": 0.001,
+  "outputs": {
+    "residual_csv": "/home/lcw/rl_sar_ws/course_design/results/task5_dynamics/inverse_forward_dynamics_residual.csv",
+    "forced_response_csv": "/home/lcw/rl_sar_ws/course_design/results/task5_dynamics/forced_response.csv",
+    "forced_response_plot": "/home/lcw/rl_sar_ws/course_design/results/task5_dynamics/forced_response.png",
+    "term_contribution_plot": "/home/lcw/rl_sar_ws/course_design/results/task5_dynamics/dynamics_term_contributions.png",
+    "residual_plot": "/home/lcw/rl_sar_ws/course_design/results/task5_dynamics/dynamics_residual_validation.png"
+  }
+}

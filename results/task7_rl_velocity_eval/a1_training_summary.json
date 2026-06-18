@@ -1,0 +1,37 @@
+{
+  "source_run_dir": "UniLab/logs/rsl_rl_ppo/A1JoystickFlat/2026-06-03_23-40-46_motrix",
+  "task_name": "A1JoystickFlat",
+  "algo": "ppo",
+  "sim_backend": "motrix",
+  "completed_iterations": 150,
+  "total_env_steps": 3710976,
+  "final_mean_reward": 45.36519004821778,
+  "best_mean_reward": 47.101322174072266,
+  "mean_episode_length": 1000.0,
+  "last_checkpoint": "UniLab/logs/rsl_rl_ppo/A1JoystickFlat/2026-06-03_23-40-46_motrix/model_150.pt",
+  "reward_scales": {
+    "tracking_lin_vel": 1.0,
+    "tracking_ang_vel": 0.2,
+    "lin_vel_z": -5.0,
+    "ang_vel_xy": -0.1,
+    "base_height": -100.0,
+    "action_rate": -0.005,
+    "similar_to_default": -0.1,
+    "contact": 0.24,
+    "swing_feet_z": 4.0
+  },
+  "command_limits": {
+    "vel_limit": [
+      [
+        0.5,
+        0.0,
+        0.0
+      ],
+      [
+        0.5,
+        0.0,
+        0.0
+      ]
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "goal_results": [],
+  "samples": 1185,
+  "align_initial_pose": true,
+  "raw_position_xy_rmse_m": 1.220297964668532,
+  "amcl_position_xy_rmse_m": 4.110720247562772,
+  "raw_yaw_rmse_rad": 1.6900934429701153,
+  "amcl_yaw_rmse_rad": 1.2022676811707078,
+  "mean_final_gt_goal_xy_error_m": NaN,
+  "mean_final_amcl_goal_xy_error_m": NaN,
+  "mean_final_gt_goal_yaw_error_rad": NaN,
+  "mean_final_amcl_goal_yaw_error_rad": NaN,
+  "cmd_vel_nonzero_ratio": 0.9082498072474943,
+  "tf_failures": 1
+}

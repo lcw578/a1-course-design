@@ -1,0 +1,50 @@
+command interfaces
+	[94mFL_calf_joint/effort [available] [claimed][0m
+	[94mFL_hip_joint/effort [available] [claimed][0m
+	[94mFL_thigh_joint/effort [available] [claimed][0m
+	[94mFR_calf_joint/effort [available] [claimed][0m
+	[94mFR_hip_joint/effort [available] [claimed][0m
+	[94mFR_thigh_joint/effort [available] [claimed][0m
+	[94mRL_calf_joint/effort [available] [claimed][0m
+	[94mRL_hip_joint/effort [available] [claimed][0m
+	[94mRL_thigh_joint/effort [available] [claimed][0m
+	[94mRR_calf_joint/effort [available] [claimed][0m
+	[94mRR_hip_joint/effort [available] [claimed][0m
+	[94mRR_thigh_joint/effort [available] [claimed][0m
+state interfaces
+	FL_calf_joint/effort
+	FL_calf_joint/position
+	FL_calf_joint/velocity
+	FL_hip_joint/effort
+	FL_hip_joint/position
+	FL_hip_joint/velocity
+	FL_thigh_joint/effort
+	FL_thigh_joint/position
+	FL_thigh_joint/velocity
+	FR_calf_joint/effort
+	FR_calf_joint/position
+	FR_calf_joint/velocity
+	FR_hip_joint/effort
+	FR_hip_joint/position
+	FR_hip_joint/velocity
+	FR_thigh_joint/effort
+	FR_thigh_joint/position
+	FR_thigh_joint/velocity
+	RL_calf_joint/effort
+	RL_calf_joint/position
+	RL_calf_joint/velocity
+	RL_hip_joint/effort
+	RL_hip_joint/position
+	RL_hip_joint/velocity
+	RL_thigh_joint/effort
+	RL_thigh_joint/position
+	RL_thigh_joint/velocity
+	RR_calf_joint/effort
+	RR_calf_joint/position
+	RR_calf_joint/velocity
+	RR_hip_joint/effort
+	RR_hip_joint/position
+	RR_hip_joint/velocity
+	RR_thigh_joint/effort
+	RR_thigh_joint/position
+	RR_thigh_joint/velocity

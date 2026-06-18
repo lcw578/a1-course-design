@@ -1,0 +1,78 @@
+{
+  "model": "2R sagittal thigh-calf subsystem",
+  "q0_rad": [
+    0.75,
+    -1.35
+  ],
+  "qf_rad": [
+    0.95,
+    -1.05
+  ],
+  "duration_sec": 3.5,
+  "dt_sec": 0.001,
+  "control_law": {
+    "computed_torque": "tau = M(q)a + C(q,dq) + g(q)",
+    "auxiliary_acceleration": "a = ddq_d + Kv(dq_d - dq) + Kp(q_d - q)",
+    "velocity_pid_baseline": "qdot_cmd = Kp(q_d-q) + Kd(dq_d-dq) + Ki integral(q_d-q)dt"
+  },
+  "computed_torque_gains": {
+    "wn_rad_s": [
+      12.0,
+      12.0
+    ],
+    "kp": [
+      144.0,
+      144.0
+    ],
+    "kv": [
+      24.0,
+      24.0
+    ],
+    "damping_ratio": 1.0
+  },
+  "metrics": {
+    "velocity_pid": {
+      "position_rmse_rad": 0.015977537849062893,
+      "velocity_rmse_rad_s": 0.01654111981587807,
+      "max_position_error_rad": 0.025333829889199258,
+      "final_position_error_rad": 0.0014340251124985172,
+      "max_abs_tau_Nm": 0.0,
+      "max_abs_ddq_rad_s2": 0.1396731519659976
+    },
+    "computed_torque": {
+      "position_rmse_rad": 0.00012509753997722053,
+      "velocity_rmse_rad_s": 6.747285396566039e-05,
+      "max_position_error_rad": 0.00019734064137237343,
+      "final_position_error_rad": 5.576426517172634e-06,
+      "max_abs_tau_Nm": 1.1014115724154085,
+      "max_abs_ddq_rad_s2": 0.14136294985663342
+    },
+    "computed_torque_mass_plus20": {
+      "position_rmse_rad": 0.061749411671116625,
+      "velocity_rmse_rad_s": 0.06533933773970373,
+      "max_position_error_rad": 0.07244702591666544,
+      "final_position_error_rad": 0.05346457825505241,
+      "max_abs_tau_Nm": 1.397323297129477,
+      "max_abs_ddq_rad_s2": 7.502590134138899
+    },
+    "computed_torque_mass_minus20": {
+      "position_rmse_rad": 0.05199153495042144,
+      "velocity_rmse_rad_s": 0.06006931227588086,
+      "max_position_error_rad": 0.061172315955509655,
+      "final_position_error_rad": 0.04433037921051032,
+      "max_abs_tau_Nm": 1.0998258231368003,
+      "max_abs_ddq_rad_s2": 10.254875575269354
+    }
+  },
+  "performance_summary": {
+    "computed_torque_vs_pid_position_rmse_ratio": 0.00782958808541065,
+    "computed_torque_position_rmse_improvement_percent": 99.21704119145893
+  },
+  "robustness_note": "Mass uncertainty increases tracking error because the controller uses the nominal inverse-dynamics model. The +20% heavier plant is the worst case in this experiment, while the -20% case shows a smaller but still visible degradation.",
+  "outputs": {
+    "csv": "/home/lcw/rl_sar_ws/course_design/results/task6_computed_torque/controller_comparison.csv",
+    "tracking_plot": "/home/lcw/rl_sar_ws/course_design/results/task6_computed_torque/controller_comparison.png",
+    "robustness_plot": "/home/lcw/rl_sar_ws/course_design/results/task6_computed_torque/computed_torque_robustness.png",
+    "control_output_plot": "/home/lcw/rl_sar_ws/course_design/results/task6_computed_torque/control_output_comparison.png"
+  }
+}

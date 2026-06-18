@@ -1,0 +1,27 @@
+header:
+  stamp:
+    sec: 327
+    nanosec: 800000000
+  frame_id: base
+contacts:
+- leg_name: FR
+  is_contact: true
+  is_fresh: true
+  force_norm: 29.282882690429688
+  contact_confidence: 1.0
+- leg_name: FL
+  is_contact: true
+  is_fresh: true
+  force_norm: 58.834659576416016
+  contact_confidence: 1.0
+- leg_name: RR
+  is_contact: true
+  is_fresh: true
+  force_norm: 38.049503326416016
+  contact_confidence: 1.0
+- leg_name: RL
+  is_contact: true
+  is_fresh: true
+  force_norm: 10.962248802185059
+  contact_confidence: 1.0
+---

@@ -1,0 +1,124 @@
+{
+  "leg": "FR",
+  "max_finite_difference_jacobian_error": 1.1088781459307783e-10,
+  "max_finite_difference_spatial_jacobian_error": 3.1080836960770227e-10,
+  "max_finite_difference_body_jacobian_error": 2.9618137951949864e-10,
+  "max_spatial_to_point_jacobian_error": 1.2888427958941859e-16,
+  "minimum_abs_determinant_sample": {
+    "q_hip": -0.07375980419669403,
+    "q_thigh": -0.9706588199253529,
+    "q_calf": -1.2007872639480388,
+    "determinant": 3.152481919440527e-06,
+    "condition_number": 4660.4305441262595,
+    "rank": 3,
+    "fd_jacobian_error": 3.187786078846004e-11,
+    "fd_spatial_jacobian_error": 6.852334580057186e-11,
+    "fd_body_jacobian_error": 7.894424298373405e-11,
+    "spatial_to_point_jacobian_error": 5.5646834934474e-17
+  },
+  "nominal_q_rad": [
+    0.0,
+    0.8,
+    -1.5
+  ],
+  "nominal_rank": 3,
+  "nominal_point_velocity_jacobian_Jv": [
+    [
+      0.0,
+      -0.29230977932633084,
+      -0.15296843745689773
+    ],
+    [
+      0.29230977932633084,
+      0.0,
+      0.0
+    ],
+    [
+      -0.0838,
+      0.014627680732366338,
+      -0.12884353744753824
+    ]
+  ],
+  "nominal_space_jacobian_Js_omega_then_v": [
+    [
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      1.0,
+      1.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      -0.0,
+      -0.0,
+      0.13934134186943312
+    ],
+    [
+      -0.0,
+      -0.0,
+      -0.0
+    ],
+    [
+      0.047,
+      0.1805,
+      0.03702878182009542
+    ]
+  ],
+  "nominal_body_jacobian_Jb_omega_then_v": [
+    [
+      0.7648421872844883,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      1.0,
+      1.0
+    ],
+    [
+      -0.644217687237691,
+      0.0,
+      0.0
+    ],
+    [
+      -0.053985442190518505,
+      -0.21414744033354066,
+      -0.20000000000000012
+    ],
+    [
+      0.29230977932633084,
+      0.0,
+      0.0
+    ],
+    [
+      -0.06409377529444012,
+      0.19949899732081097,
+      6.088366684073982e-17
+    ]
+  ],
+  "jacobian_definition_note": "Jv is the 3x3 foot-origin linear velocity Jacobian used for singularity determinant and tau = Jv^T f mapping. Js and Jb are 6x3 Modern Robotics twist Jacobians ordered as [omega; v]. Since the A1 leg has only 3 actuated joints, Js/Jb are not square and do not have determinants; rank and singular values are the proper full-twist diagnostics.",
+  "force_mapping_example": {
+    "foot_force_N": [
+      0.0,
+      0.0,
+      20.0
+    ],
+    "joint_torque_Nm": [
+      -1.676,
+      0.29255361464732677,
+      -2.576870748950765
+    ]
+  },
+  "nullspace_note": "For the selected 3D foot-position task and 3 actuated joints, J is square. Away from singular configurations the nullspace is zero-dimensional; near singular samples the rank drops and non-zero joint velocity directions can produce little foot velocity.",
+  "outputs": {
+    "csv": "/home/lcw/rl_sar_ws/course_design/results/task3_jacobian/fr_jacobian_scan.csv",
+    "plot": "/home/lcw/rl_sar_ws/course_design/results/task3_jacobian/fr_singularity_scan.png"
+  }
+}

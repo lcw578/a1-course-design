@@ -1,0 +1,37 @@
+{
+  "goal_results": [
+    {
+      "name": "goal_3m",
+      "status": "SUCCEEDED",
+      "duration_sec": 9.111952176,
+      "goal_x_m": 3.0,
+      "goal_y_m": 0.0,
+      "goal_yaw_rad": 0.0,
+      "final_amcl_xy_error_m": 0.5969233597207089,
+      "final_raw_xy_error_m": 0.9467206753940237,
+      "final_amcl_yaw_error_rad": 0.2175726568165871,
+      "final_raw_yaw_error_rad": 0.004604533063260446,
+      "final_raw_goal_xy_error_m": 1.3021062558483463,
+      "final_amcl_goal_xy_error_m": 0.7924991785360481,
+      "final_gt_goal_xy_error_m": 0.3582952777710264,
+      "final_raw_goal_yaw_error_rad": 0.02971091569441111,
+      "final_amcl_goal_yaw_error_rad": 0.24267903944773778,
+      "final_gt_goal_yaw_error_rad": 0.025106382631150656,
+      "raw_path_length_m": 2.641393253860568,
+      "amcl_path_length_m": 5.58027760036235,
+      "gt_path_length_m": 2.5245159956372194
+    }
+  ],
+  "samples": 1706,
+  "align_initial_pose": true,
+  "raw_position_xy_rmse_m": 0.9868893026352331,
+  "amcl_position_xy_rmse_m": 1.4897710691966357,
+  "raw_yaw_rmse_rad": 0.9045048950315452,
+  "amcl_yaw_rmse_rad": 0.23900012571046617,
+  "mean_final_gt_goal_xy_error_m": 0.3582952777710264,
+  "mean_final_amcl_goal_xy_error_m": 0.7924991785360481,
+  "mean_final_gt_goal_yaw_error_rad": 0.025106382631150656,
+  "mean_final_amcl_goal_yaw_error_rad": 0.24267903944773778,
+  "cmd_vel_nonzero_ratio": 0.9866716031099593,
+  "tf_failures": 4
+}
